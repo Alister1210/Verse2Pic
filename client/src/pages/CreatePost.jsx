@@ -19,11 +19,14 @@ const CreatePost = () => {
     if (form.prompt && form.photo) {
       setloading(true);
       try {
-        const response = await fetch("https://verse2-pic-server.vercel.app/api/v1/posts", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(form),
-        });
+        const response = await fetch(
+          "https://verse2pic-server.onrender.com/api/v1/posts",
+          {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(form),
+          }
+        );
         await response.json();
         navigate("/");
       } catch (error) {
@@ -40,11 +43,14 @@ const CreatePost = () => {
     if (form.prompt) {
       try {
         setgeneratingImg(true);
-        const response = await fetch("https://verse2-pic-server.vercel.app/api/v1/dalle", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ prompt: form.prompt }),
-        });
+        const response = await fetch(
+          "https://verse2pic-server.onrender.com/api/v1/dalle",
+          {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ prompt: form.prompt }),
+          }
+        );
         const data = await response.json();
 
         setform({ ...form, photo: data.photo });

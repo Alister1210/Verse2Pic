@@ -22,12 +22,15 @@ const Home = () => {
   const fetchPosts = async () => {
     setloading(true);
     try {
-      const response = await fetch("https://verse2-pic-server.vercel.app/api/v1/posts", {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
+      const response = await fetch(
+        "https://verse2pic-server.onrender.com/api/v1/posts",
+        {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
       if (response.ok) {
         const result = await response.json();
         setallPosts(result.data);
