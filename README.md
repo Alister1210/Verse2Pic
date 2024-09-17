@@ -84,7 +84,7 @@ VERSE-2-PIC is a powerful text-to-image generation app where users can create un
 
 ## **Usage**
 
-Visit the live version of the project at [VERSE-2-PIC](https://verse-2-pic.vercel.app). Enter a text prompt to generate an image, share it with the community, or download it for your personal use.
+Visit the live version of the project at [VERSE-2-PIC](https://verse2pic.vercel.app/). Enter a text prompt to generate an image, share it with the community, or download it for your personal use.
 
 ---
 
