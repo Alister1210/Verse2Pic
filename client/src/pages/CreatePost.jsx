@@ -21,6 +21,7 @@ const CreatePost = () => {
       try {
         const response = await fetch(
           "https://verse2pic-server.onrender.com/api/v1/posts",
+          // "http://localhost:3000/api/v1/posts",
           {
             method: "POST",
             headers: { "Content-Type": "application/json" },
@@ -45,6 +46,7 @@ const CreatePost = () => {
         setgeneratingImg(true);
         const response = await fetch(
           "https://verse2pic-server.onrender.com/api/v1/dalle",
+          // "http://localhost:3000/api/v1/dalle",
           {
             method: "POST",
             headers: { "Content-Type": "application/json" },

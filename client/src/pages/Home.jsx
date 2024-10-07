@@ -24,6 +24,7 @@ const Home = () => {
     try {
       const response = await fetch(
         "https://verse2pic-server.onrender.com/api/v1/posts",
+        // "http://localhost:3000/api/v1/posts",
         {
           method: "GET",
           headers: {
